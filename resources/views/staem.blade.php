@@ -7,10 +7,26 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>staems</title>
 </head>
+<style>
+    body {
+        margin: 0;
+        background: #463f3f;
+    }
+
+    h1 {
+        margin: 0;
+        padding: 18px 20px;
+        color: #ff0000;
+    }
+</style>
 <body>
 @foreach ($staems as $staem)
-    <p style="color: aqua; background-color: #1c1c1a" > Название игры = {{ $staem->name}} стоимость игры = {{ $staem->sale}} количество играков = {{ $staem->geims_users}}</p>
-
+    <p>
+        Название игры = {{ $staem->name }}
+        стоимость игры = {{ $staem->sale }}
+        количество игроков = {{ $staem->geims_users }}
+    </p>
 @endforeach
 </body>
 </html>
+

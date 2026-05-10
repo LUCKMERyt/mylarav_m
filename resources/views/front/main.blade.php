@@ -1,76 +1,85 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная страница</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #463f3f;
+            color: #1f2937;
+        }
+
+        h1 {
+            margin: 0;
+            padding: 18px 20px;
+            background: #3e4747;
+            border-bottom: 1px solid #e5e7eb;
+            color: #ff8200;
+        }
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .card {
+            margin: 0 auto;
+            width: 300px;
+            background: #474f52;
+            border: 1px solid #557571;
+            border-radius: 12px;
+            padding: 12px;
+        }
+
+        .img_card {
+            width: 100%;
+            height: 220px;
+            border-radius: 10px;
+            background: #d7f7ff;
+        }
+
+        .title {
+            margin: 10px 0 6px;
+            font-size: 16px;
+            font-weight: 700;
+            color: #000000;
+        }
+
+        .price {
+            margin: 0 0 8px;
+            font-weight: 800;
+            color: #001264;
+        }
+
+        .desc {
+            margin: 0;
+            font-size: 13px;
+            color: #ffaf1c;
+        }
+    </style>
 </head>
+
 <body>
-<style>
-    .sidebar{
-        width: 30%;
-        height: 700px;
-        display: flex;
-    }
-    .content{
-        width: 70%;
-        height: 700px;
-        display: flex;
-        justify-content: space-between;
-    }
-    .content_item{
-        width: 300px;
-        height: 400px;
-        background-color: #8cb5bd;
-    }
-    .content_item img{
-        width: 280px;
-        height: 280px;
-        margin: 0 auto;
-    }
-    .price{
-        color: #1937bd;
-    }
 
+    <h1>Моя Главная Страница</h1>
 
-
-
-</style>
-<h1 style="color: #ff8200"> Моя Главная Страница</h1>
-
-
-
-<div class="sidebar">
-
-</div>
-
-<div class="content">
-
-
-
-    @foreach ($main as $value)
-        <div class="content_item">
-            <img src="{{$value->image}}" alt="">
-            <h3>{{$value->title}}</h3>
+    <div class="content">
+        @foreach ($main as $value)
+        <div class="card">
+            <img class="img_card" src="{{$value->image}}" alt="">
+            <div class="title">{{ $value->title ?? $value->titl }}</div>
             <p class="price">{{$value->price}}</p>
-            <p>{{$value->description}}</p>
+            <p class="desc">{{$value->description}}</p>
         </div>
-    @endforeach
-</div>
-
-
-
-
-
-
-<script>
-
-</script>
+        @endforeach
+    </div>
 
 </body>
+
 </html>
-
-
-<?php
