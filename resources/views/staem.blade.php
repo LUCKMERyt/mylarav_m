@@ -1,32 +1,41 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ru">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>staems</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ asset("css/style.css") }}">
+    <title>My Site</title>
+
 </head>
-<style>
-    body {
-        margin: 0;
-        background: #463f3f;
-    }
 
-    h1 {
-        margin: 0;
-        padding: 18px 20px;
-        color: #ff0000;
-    }
-</style>
 <body>
-@foreach ($staems as $staem)
-    <p>
-        Название игры = {{ $staem->name }}
-        стоимость игры = {{ $staem->sale }}
-        количество игроков = {{ $staem->geims_users }}
-    </p>
-@endforeach
-</body>
-</html>
+    <header>
+        <div class="header-logo">
 
+        </div>
+        <div class="header-menu">
+            <div id="menu">
+                <ul>
+                    <a href="/mylarav/public/about"> О нас</a>
+                    <a href="/mylarav/public/">Главная</a>
+                </ul>
+                <router-view></router-view>
+            </div>
+        </div>
+        <div class="header-login">
+
+        </div>
+    </header>
+    <h1>О нас</h1>
+
+
+    <footer>
+    </footer>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="https://unpkg.com/vue-router@next"></script>
+    <script src="{{ asset("js/main.js") }}"></script>
+</body>
+
+</html>

@@ -1,0 +1,172 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #463f3f;
+    color: #1f2937;
+}
+
+h1 {
+    margin: 0;
+    padding: 18px 20px;
+    background: #3e4747;
+    border-bottom: 1px solid #e5e7eb;
+    color: #ff8200;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.card {
+    margin: 0 auto;
+    width: 300px;
+    background: #474f52;
+    border: 1px solid #557571;
+    border-radius: 12px;
+    padding: 12px;
+}
+
+.img_card {
+    width: 100%;
+    height: 220px;
+    border-radius: 10px;
+    background: #d7f7ff;
+}
+
+.title {
+    margin: 10px 0 6px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000000;
+}
+
+.price {
+    margin: 0 0 8px;
+    font-weight: 800;
+    color: #001264;
+}
+
+.desc {
+    margin: 0;
+    font-size: 13px;
+    color: #ffaf1c;
+}
+
+
+
+.main-link {
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+    display: flex;
+    padding: 10px 14px;
+    background: #86b7fe;
+    color: #1f2937;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.main-link:hover {
+    filter: brightness(0.95);
+}
+
+
+
+.about-wrapper {
+    width: 80%;
+    max-width: 980px;
+    margin: 24px auto;
+    padding: 0 12px;
+}
+
+.about-card {
+    background: #474f52;
+    border: 1px solid #557571;
+    border-radius: 12px;
+    padding: 18px;
+    color: #ffaf1c;
+}
+
+.about-title {
+    margin: 0 0 8px;
+    color: #d7f7ff;
+}
+
+.about-text {
+    margin: 0 0 14px;
+    line-height: 1.5;
+}
+
+.about-list {
+    margin: 0;
+    padding-left: 18px;
+}
+
+.about-list li {
+    margin: 6px 0;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    background-color: #86b7fe;
+    display: flex;
+    flex-direction: row;
+}
+
+.header-logo {
+    width: 30%;
+}
+
+.header-menu {
+    width: 50%;
+}
+
+.header-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.header-menu li {
+    display: inline-block;
+}
+
+.header-menu a {
+    padding: 5px;
+}
+
+.header-menu a.router-link-active,
+.header-menu li.router-link-active>a {
+    color: red;
+}
+
+.header-login {
+    width: 20%;
+}
+
+.main {
+    width: 80%;
+    min-height: 80vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.main-sidebar {
+    width: 30%;
+}
+
+.main-content {
+    width: 70%;
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+    background-color: #6c757d;
+}
